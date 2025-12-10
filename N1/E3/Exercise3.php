@@ -16,27 +16,27 @@
 
         <?php
 
-        $MyArray = array("red", "green", "blue", "yellow");
+        $Colors = array("red", "green", "blue", "yellow");
         $Character = 'l';
 
         echo "<h2>Tenim l'array:</h2>";
-        print_r($MyArray);
-        echo "<h2>Busquem d'ins de l'array el caràcter '$Character'</h2><br>";
+        print_r($Colors);
+        echo "<h2>Busquem dins de l'array el caràcter '$Character'</h2><br>";
         
 
-        $result = SearchCharacter($MyArray, $Character);
-        ShowResult($result, $Character);
+        $Result = SearchCharacter($Colors, $Character);
+        ShowResult($Result, $Character);
 
         $Character = 'e';
-        echo "<h2>Ara busquem d'ins de l'array el caràcter '$Character'</h2><br>";
-        $result = SearchCharacter($MyArray, $Character);
-        ShowResult($result, $Character);
+        echo "<h2>Ara busquem dins de l'array el caràcter '$Character'</h2><br>";
+        $Result = SearchCharacter($Colors, $Character);
+        ShowResult($Result, $Character);
 
 
-        function SearchCharacter($MyArray, $Character){
+        function SearchCharacter($Colors, $Character){
 
             $Contains=TRUE;
-            foreach ($MyArray as $x) {
+            foreach ($Colors as $x) {
                 if (!strpos($x, $Character)){
                     $Contains = FALSE;
                 }
@@ -44,8 +44,8 @@
             return $Contains;
         }
 
-        function ShowResult($result, $Character){
-            if ($result) {
+        function ShowResult($Result, $Character){
+            if ($Result) {
                 echo "<h2>Resultat: Si conté el caracter '$Character' en tots els elements del array</h2><br>";            
             }
             else {
@@ -53,8 +53,6 @@
             }
         }
         ?>
-
     </div>
-
 </body>
 </html>

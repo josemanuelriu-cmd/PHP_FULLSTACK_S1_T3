@@ -13,15 +13,15 @@
         $MyArray = [1,2,3,4,5];
         ?>
         <ul>
-            <?php
-            echo "<li>" . $MyArray[0] . "</li>";
-            echo "<li>" . $MyArray[1] . "</li>";
-            echo "<li>" . $MyArray[2] . "</li>";
-            echo "<li>" . $MyArray[3] . "</li>";
-            echo "<li>" . $MyArray[4] . "</li>";       
-            ?>
+            <?php ShowArray($MyArray); ?>
         </ul>
     </div>
-
+    <?php 
+    function ShowArray($MyArray){
+        foreach ($MyArray as $x) {
+            echo "<li>" . $x . "</li>";
+        }           
+    } 
+    ?>
 </body>
 </html>
