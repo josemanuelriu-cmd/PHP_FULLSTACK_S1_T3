@@ -24,16 +24,16 @@
         echo "<h2>Busquem dins de l'array el caràcter '$Character'</h2><br>";
         
 
-        $Result = SearchCharacter($Colors, $Character);
+        $Result = SearchCharacterInArray($Colors, $Character);
         ShowResult($Result, $Character);
 
         $Character = 'e';
         echo "<h2>Ara busquem dins de l'array el caràcter '$Character'</h2><br>";
-        $Result = SearchCharacter($Colors, $Character);
+        $Result = SearchCharacterInArray($Colors, $Character);
         ShowResult($Result, $Character);
 
 
-        function SearchCharacter($Colors, $Character){
+        function SearchCharacterInArray($Colors, $Character){
 
             $Contains=TRUE;
             foreach ($Colors as $x) {
