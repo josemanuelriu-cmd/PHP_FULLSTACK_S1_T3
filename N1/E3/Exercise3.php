@@ -16,8 +16,7 @@
 
         <?php
 
-        $Colors = array("red", "rgreen", "Rblue", "ryEllow");
-        
+        $Colors = array("red", "rgreen", "Rblue", "ryEllow");        
 
         echo "<h2>Tenim l'array:</h2>";
         print_r($Colors);
@@ -46,10 +45,7 @@
                 $Contains=TRUE;
             }
             foreach ($Colors as $x) {
-                //echo "<h3>Comprovant l'element: $x</h3>";
-                //echo strpos(strtolower($x), strtolower($Character));
                 if (strpos(strtolower($x), strtolower($Character))===false) {
-                    //echo "False<br>";
                     $Contains = FALSE;
                     break;
                 }
