@@ -9,13 +9,14 @@
 <body>
     <div>
         <h1>Arrays nivell 2</h1>
-        <!--
+        <?php /*
             Crea un programa que llisti les notes dels alumnes d’una classe. 
             Per això haurem d’utilitzar un array associatiu on la clau serà el nom de cada alumne. 
             Cada alumne tindrà 5 notes (valorades del 0 al 10).
 
             A més, crea una funció que, donades les notes de tots els alumnes, ens mostri tant la mitjana de la nota de cada alumne, com la nota mitjana de la classe sencera.
-        -->
+          */
+        ?>
         <?php
         $Alumns = array (
             array("Anna",6,8,5,9,3),
@@ -25,13 +26,40 @@
             );
         ?>
         <h2>Alumnes i les seves notes</h2>
+        
         <ul>        
             <?php foreach ($Alumns as $alumne) {
-                echo "<li>" . $alumne[0]." - Nota 1: ".$alumne[1]." - Nota 2: ".$alumne[2]." - Nota 3: ".$alumne[3]." - Nota 4: ".$alumne[4]." - Nota 5: ".$alumne[5]."</li><br>";
-            } ?>    
+                //echo "<li>" . $alumne[0]." - Nota 1: ".$alumne[1]." - Nota 2: ".$alumne[2]." - Nota 3: ".$alumne[3]." - Nota 4: ".$alumne[4]." - Nota 5: ".$alumne[5]."</li><br>";
+                foreach ($alumne as $key => $value) {
+                    if($key==0){
+                        echo "<li>" .$alumne[0]." --> ";
+                    }else{
+                        echo $value.",";
+                    }
+                }
+                echo "</li><br>";                
+            }             
+            ?>    
         </ul>
 
-        <?php
+        <table border="1">
+            <tr>
+ 
+            <?php
+            foreach ($Alumns as $alumne) {
+                echo "<tr>";
+                foreach ($alumne as $valor) {
+                    echo "<td>$valor</td>";
+                }
+                ?>
+                </tr>
+            <?php
+            }
+            ?>
+        </table>
+ 
+        <?php      
+
         Mitjanes($Alumns);
 
         function Mitjanes($Alumns){
