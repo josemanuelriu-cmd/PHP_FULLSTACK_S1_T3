@@ -43,21 +43,17 @@
         </ul>
 
         <table border="1">
-            <tr>
- 
+            <tr> 
             <?php
             foreach ($Alumns as $alumne) {
                 echo "<tr>";
                 foreach ($alumne as $valor) {
                     echo "<td>$valor</td>";
                 }
-                ?>
-                </tr>
-            <?php
+                echo "</tr>";
             }
-            ?>
-        </table>
- 
+        ?>
+        </table> 
         <?php      
 
         Mitjanes($Alumns);
